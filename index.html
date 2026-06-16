@@ -1,75 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <title>Coffee O'clock Menu</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee O'clock Menu</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="hero">
-    <div class="badge">☕ Coffee O'clock</div>
 
-    <h1>Digital Menu</h1>
+<div class="badge">
+☕ Coffee O'clock
+</div>
 
-    <p>Scan, view, and order your favorites.</p>
+<h1>Digital Menu</h1>
 
-    <p class="location">
-        📍 Annafunan East, Tuguegarao City
-    </p>
+<p>Scan, view, and order your favorites.</p>
 
-    <nav class="tabs">
-        <a href="#coffee">Coffee</a>
-        <a href="#drinks">Drinks</a>
-        <a href="#food">Food</a>
-        <a href="#snacks">Snacks</a>
-    </nav>
+<p class="location">
+📍 Annafunan East, Tuguegarao City
+</p>
+
+<nav class="tabs">
+<a href="#coffee">Coffee</a>
+<a href="#drinks">Drinks</a>
+<a href="#food">Food</a>
+<a href="#snacks">Snacks</a>
+</nav>
+
 </header>
 
 <main>
 
-    <section id="coffee" class="menu-card">
-        <h2>☕ Coffee, Matcha & Non-Coffee</h2>
+<section id="coffee" class="menu-card">
+<h2>☕ Coffee, Matcha & Non-Coffee</h2>
 
-        <img
-            src="assets/menu-coffee.jpg"
-            alt="Coffee Menu">
-    </section>
+<p class="tap-note">
+🔍 Tap image to zoom
+</p>
 
-    <section id="drinks" class="menu-card">
-        <h2>🥤 Fruit Tea, Refreshers & Frappe</h2>
+<img
+src="assets/menu-coffee.jpg"
+alt="Coffee Menu"
+onclick="openImage(this.src)">
+</section>
 
-        <img
-            src="assets/menu-drinks-1.jpg"
-            alt="Drinks Menu">
-    </section>
+<section id="drinks" class="menu-card">
+<h2>🥤 Fruit Tea, Refreshers & Frappe</h2>
 
-    <section id="food" class="menu-card">
-        <h2>🍔 Frappe, Milk Tea & Sandwiches</h2>
+<p class="tap-note">
+🔍 Tap image to zoom
+</p>
 
-        <img
-            src="assets/menu-food-1.jpg"
-            alt="Food Menu">
-    </section>
+<img
+src="assets/menu-drinks-1.jpg"
+alt="Drinks Menu"
+onclick="openImage(this.src)">
+</section>
 
-    <section id="snacks" class="menu-card">
-        <h2>🍚 Snacks, Rice Bowls & Pasta</h2>
+<section id="food" class="menu-card">
+<h2>🍔 Frappe, Milk Tea & Sandwiches</h2>
 
-        <img
-            src="assets/menu-food-2.jpg"
-            alt="Snacks Menu">
-    </section>
+<p class="tap-note">
+🔍 Tap image to zoom
+</p>
+
+<img
+src="assets/menu-food-1.jpg"
+alt="Food Menu"
+onclick="openImage(this.src)">
+</section>
+
+<section id="snacks" class="menu-card">
+<h2>🍚 Snacks, Rice Bowls & Pasta</h2>
+
+<p class="tap-note">
+🔍 Tap image to zoom
+</p>
+
+<img
+src="assets/menu-food-2.jpg"
+alt="Snacks Menu"
+onclick="openImage(this.src)">
+</section>
 
 </main>
 
 <footer>
-    <p>
-        Thank you for visiting Coffee O'clock 🤎
-    </p>
+Thank you for visiting Coffee O'clock 🤎
 </footer>
+
+<!-- IMAGE MODAL -->
+
+<div id="imageModal" class="modal" onclick="closeImage()">
+<img id="modalImage">
+</div>
+
+<script>
+
+function openImage(src){
+document.getElementById("modalImage").src = src;
+document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage(){
+document.getElementById("imageModal").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
