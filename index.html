@@ -10,12 +10,9 @@
 <body>
 
 <header class="hero">
-
     <img src="assets/Coffee_Oclock_logo.jpg" alt="Coffee O'clock Logo" class="logo">
 
-    <h1>Digital Menu</h1>
-
-    <p>Scan, view, and order your favorites.</p>
+    <h1>Coffee O'clock</h1>
 
     <p class="location">📍 Annafunan East, Tuguegarao City</p>
 
@@ -32,37 +29,29 @@
             📍 Visit Us
         </a>
     </div>
-
-    <nav class="tabs">
-        <a href="#coffee">Coffee</a>
-        <a href="#drinks">Drinks</a>
-        <a href="#food">Food</a>
-        <a href="#snacks">Snacks</a>
-    </nav>
-
 </header>
 
 <main>
 
-<section id="coffee" class="menu-card">
+<section class="menu-card">
     <h2>☕ Coffee, Matcha & Non-Coffee</h2>
     <p class="tap-note">🔍 Tap image to zoom</p>
     <img src="assets/menu-coffee.jpg" alt="Coffee Menu" onclick="openImage(this.src)">
 </section>
 
-<section id="drinks" class="menu-card">
+<section class="menu-card">
     <h2>🥤 Fruit Tea, Refreshers & Frappe</h2>
     <p class="tap-note">🔍 Tap image to zoom</p>
     <img src="assets/menu-drinks-1.jpg" alt="Drinks Menu" onclick="openImage(this.src)">
 </section>
 
-<section id="food" class="menu-card">
+<section class="menu-card">
     <h2>🍔 Frappe, Milk Tea & Sandwiches</h2>
     <p class="tap-note">🔍 Tap image to zoom</p>
     <img src="assets/menu-food-1.jpg" alt="Food Menu" onclick="openImage(this.src)">
 </section>
 
-<section id="snacks" class="menu-card">
+<section class="menu-card">
     <h2>🍚 Snacks, Rice Bowls & Pasta</h2>
     <p class="tap-note">🔍 Tap image to zoom</p>
     <img src="assets/menu-food-2.jpg" alt="Snacks Menu" onclick="openImage(this.src)">
@@ -72,24 +61,15 @@
 
 <footer>
     <h3>Coffee O'clock</h3>
-
     <p>Serving great coffee, meals, and memories.</p>
 
     <div class="footer-links">
-        <a href="https://www.facebook.com/profile.php?id=100088543704232" target="_blank">
-            📘 Facebook
-        </a>
-
-        <a href="https://www.instagram.com/coffeeoclock2023" target="_blank">
-            📸 Instagram
-        </a>
-
-        <a href="https://www.google.com/maps/search/?api=1&query=Coffee%20O%27clock%20Annafunan%20East%20Tuguegarao%20City" target="_blank">
-            📍 Visit Us
-        </a>
+        <a href="https://www.facebook.com/profile.php?id=100088543704232" target="_blank">📘 Facebook</a>
+        <a href="https://www.instagram.com/coffeeoclock2023" target="_blank">📸 Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Coffee%20O%27clock%20Annafunan%20East%20Tuguegarao%20City" target="_blank">📍 Visit Us</a>
     </div>
 
-    <p class="copyright">© 2026 Coffee O'clock - Davinci</p>
+    <p class="copyright">© 2026 Coffee O'clock</p>
 </footer>
 
 <a href="https://www.facebook.com/profile.php?id=100088543704232" target="_blank" class="floating-message">
@@ -110,31 +90,19 @@ function closeImage() {
     document.getElementById("imageModal").style.display = "none";
 }
 
-/* Auto-hide header when scrolling down */
-
 let lastScrollTop = 0;
-
 const header = document.querySelector(".hero");
 
 window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    const scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop;
-
-    if (
-        scrollTop > lastScrollTop &&
-        scrollTop > 100
-    ) {
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
         header.classList.add("hide-header");
     } else {
         header.classList.remove("hide-header");
     }
 
-    lastScrollTop =
-        scrollTop <= 0
-            ? 0
-            : scrollTop;
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 </script>
 
