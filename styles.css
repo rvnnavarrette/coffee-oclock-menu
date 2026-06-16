@@ -26,7 +26,7 @@ body {
     top: 0;
     z-index: 1000;
     text-align: center;
-    padding: 18px 15px 14px;
+    padding: 16px 15px 14px;
     background: linear-gradient(
         180deg,
         rgba(87, 67, 49, 0.98),
@@ -34,11 +34,16 @@ body {
     );
     backdrop-filter: blur(12px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hide-header {
+    transform: translateY(-100%);
 }
 
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     object-fit: contain;
     border-radius: 50%;
     background: white;
@@ -47,20 +52,17 @@ body {
 }
 
 .hero h1 {
-    margin-top: 10px;
-    font-size: clamp(2rem, 7vw, 4rem);
-}
-
-.hero p {
-    margin-top: 7px;
+    margin-top: 8px;
+    font-size: clamp(2rem, 7vw, 3.5rem);
 }
 
 .location {
+    margin-top: 6px;
     font-weight: bold;
 }
 
 .action-buttons {
-    margin-top: 13px;
+    margin-top: 12px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -71,38 +73,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 130px;
+    min-width: 125px;
     background: white;
     color: var(--dark);
-    padding: 10px 15px;
+    padding: 10px 14px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: all .2s ease;
-}
-
-.action-buttons a:hover {
-    transform: translateY(-2px);
-}
-
-.tabs {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 7px;
-}
-
-.tabs a {
-    background: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 12px 4px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 14px;
 }
 
 main {
@@ -116,7 +95,6 @@ main {
     padding: 15px;
     border-radius: 25px;
     margin-bottom: 25px;
-    scroll-margin-top: 350px;
 }
 
 .menu-card h2 {
@@ -217,37 +195,13 @@ footer h3 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .location {
         font-size: 14px;
     }
 
     .action-buttons a {
-        min-width: 120px;
+        min-width: 112px;
         font-size: 13px;
-        padding: 9px 12px;
+        padding: 9px 10px;
     }
-
-    .tabs {
-        gap: 6px;
-    }
-
-    .tabs a {
-        font-size: 13px;
-        padding: 11px 3px;
-    }
-
-    .menu-card {
-        scroll-margin-top: 330px;
-    }
-}
-
-/* Hide header while scrolling down */
-.hero {
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-.hide-header {
-    transform: translateY(-100%);
 }
