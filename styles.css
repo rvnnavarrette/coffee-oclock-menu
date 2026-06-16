@@ -240,3 +240,14 @@ footer h3 {
         scroll-margin-top: 330px;
     }
 }
+
+/* Hide header while scrolling down */
+.hero {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.hide-header {
+    transform: translateY(-100%);
+}
