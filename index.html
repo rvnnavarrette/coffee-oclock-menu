@@ -6,108 +6,105 @@
 <title>Coffee O'clock Menu</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header class="hero">
 
-<div class="badge">
-☕ Coffee O'clock
-</div>
+    <img src="assets/Coffee_Oclock_logo.jpg" alt="Coffee O'clock Logo" class="logo">
 
-<h1>Digital Menu</h1>
+    <h1>Digital Menu</h1>
 
-<p>Scan, view, and order your favorites.</p>
+    <p>Scan, view, and order your favorites.</p>
 
-<p class="location">
-📍 Annafunan East, Tuguegarao City
-</p>
+    <p class="location">📍 Annafunan East, Tuguegarao City</p>
 
-<nav class="tabs">
-<a href="#coffee">Coffee</a>
-<a href="#drinks">Drinks</a>
-<a href="#food">Food</a>
-<a href="#snacks">Snacks</a>
-</nav>
+    <div class="action-buttons">
+        <a href="https://www.facebook.com/profile.php?id=100088543704232" target="_blank">
+            📘 Facebook
+        </a>
+
+        <a href="https://www.instagram.com/coffeeoclock2023" target="_blank">
+            📸 Instagram
+        </a>
+    </div>
+
+    <a href="#coffee" class="full-menu-btn">
+        📖 View Full Menu
+    </a>
+
+    <nav class="tabs">
+        <a href="#coffee">Coffee</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#food">Food</a>
+        <a href="#snacks">Snacks</a>
+    </nav>
 
 </header>
 
 <main>
 
 <section id="coffee" class="menu-card">
-<h2>☕ Coffee, Matcha & Non-Coffee</h2>
-
-<p class="tap-note">
-🔍 Tap image to zoom
-</p>
-
-<img
-src="assets/menu-coffee.jpg"
-alt="Coffee Menu"
-onclick="openImage(this.src)">
+    <h2>☕ Coffee, Matcha & Non-Coffee</h2>
+    <p class="tap-note">🔍 Tap image to zoom</p>
+    <img src="assets/menu-coffee.jpg" alt="Coffee Menu" onclick="openImage(this.src)">
 </section>
 
 <section id="drinks" class="menu-card">
-<h2>🥤 Fruit Tea, Refreshers & Frappe</h2>
-
-<p class="tap-note">
-🔍 Tap image to zoom
-</p>
-
-<img
-src="assets/menu-drinks-1.jpg"
-alt="Drinks Menu"
-onclick="openImage(this.src)">
+    <h2>🥤 Fruit Tea, Refreshers & Frappe</h2>
+    <p class="tap-note">🔍 Tap image to zoom</p>
+    <img src="assets/menu-drinks-1.jpg" alt="Drinks Menu" onclick="openImage(this.src)">
 </section>
 
 <section id="food" class="menu-card">
-<h2>🍔 Frappe, Milk Tea & Sandwiches</h2>
-
-<p class="tap-note">
-🔍 Tap image to zoom
-</p>
-
-<img
-src="assets/menu-food-1.jpg"
-alt="Food Menu"
-onclick="openImage(this.src)">
+    <h2>🍔 Frappe, Milk Tea & Sandwiches</h2>
+    <p class="tap-note">🔍 Tap image to zoom</p>
+    <img src="assets/menu-food-1.jpg" alt="Food Menu" onclick="openImage(this.src)">
 </section>
 
 <section id="snacks" class="menu-card">
-<h2>🍚 Snacks, Rice Bowls & Pasta</h2>
-
-<p class="tap-note">
-🔍 Tap image to zoom
-</p>
-
-<img
-src="assets/menu-food-2.jpg"
-alt="Snacks Menu"
-onclick="openImage(this.src)">
+    <h2>🍚 Snacks, Rice Bowls & Pasta</h2>
+    <p class="tap-note">🔍 Tap image to zoom</p>
+    <img src="assets/menu-food-2.jpg" alt="Snacks Menu" onclick="openImage(this.src)">
 </section>
 
 </main>
 
 <footer>
-Thank you for visiting Coffee O'clock 🤎
+    <h3>Coffee O'clock</h3>
+
+    <p>Serving great coffee, meals, and memories.</p>
+
+    <div class="footer-links">
+        <a href="https://www.facebook.com/profile.php?id=100088543704232" target="_blank">
+            📘 Facebook
+        </a>
+
+        <a href="https://www.instagram.com/coffeeoclock2023" target="_blank">
+            📸 Instagram
+        </a>
+    </div>
+
+    <p class="copyright">© 2026 Coffee O'clock</p>
 </footer>
 
-<!-- IMAGE MODAL -->
+<a href="https://www.facebook.com/profile.php?id=100088543704232" target="_blank" class="floating-message">
+    💬
+</a>
 
 <div id="imageModal" class="modal" onclick="closeImage()">
-<img id="modalImage">
+    <img id="modalImage" alt="Zoomed menu">
 </div>
 
 <script>
-
-function openImage(src){
-document.getElementById("modalImage").src = src;
-document.getElementById("imageModal").style.display = "flex";
+function openImage(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").style.display = "flex";
 }
 
-function closeImage(){
-document.getElementById("imageModal").style.display = "none";
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
 }
-
 </script>
 
 </body>
