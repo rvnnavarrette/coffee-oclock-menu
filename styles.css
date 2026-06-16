@@ -63,7 +63,7 @@ body {
     margin-top: 13px;
     display: flex;
     justify-content: center;
-    gap: 9px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -71,28 +71,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
     min-width: 130px;
     background: white;
     color: var(--dark);
-    padding: 10px 14px;
+    padding: 10px 15px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all .2s ease;
 }
 
-.full-menu-btn {
-    display: inline-block;
-    margin-top: 13px;
-    background: var(--cream);
-    color: var(--dark);
-    text-decoration: none;
-    font-weight: 900;
-    padding: 11px 18px;
-    border-radius: 999px;
-    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25);
+.action-buttons a:hover {
+    transform: translateY(-2px);
 }
 
 .tabs {
@@ -124,7 +116,7 @@ main {
     padding: 15px;
     border-radius: 25px;
     margin-bottom: 25px;
-    scroll-margin-top: 360px;
+    scroll-margin-top: 350px;
 }
 
 .menu-card h2 {
@@ -232,12 +224,7 @@ footer h3 {
     .action-buttons a {
         min-width: 120px;
         font-size: 13px;
-        padding: 9px 10px;
-    }
-
-    .full-menu-btn {
-        font-size: 14px;
-        padding: 10px 15px;
+        padding: 9px 12px;
     }
 
     .tabs {
@@ -250,6 +237,6 @@ footer h3 {
     }
 
     .menu-card {
-        scroll-margin-top: 340px;
+        scroll-margin-top: 330px;
     }
 }
